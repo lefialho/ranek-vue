@@ -1,0 +1,17 @@
+:root {
+  /* Colors */
+  --primary: #87f;
+  --primary-light: #65d;
+  --secondary: #e80;
+  --gray: #345;
+  --light-gray: #f4f7fc;
+
+  /* Font */
+  --font: "Nunito Sans", sans-serif;
+  --shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
+  --light-shadow: 0 2px 4px rgba(30, 60, 90, 0.1);
+  --strong-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
+}
+
+// scss-variables
+$size-app-max-width: 1000px;

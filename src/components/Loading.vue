@@ -1,0 +1,56 @@
+<template>
+  <div class="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Loading",
+};
+</script>
+
+<style lang="scss" scoped>
+.loading {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--primary);
+    animation: dots 0.3s cubic-bezier(0.6, 0.1, 1, 0.4) infinite alternate;
+
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+@keyframes dots {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+  }
+}
+</style>
