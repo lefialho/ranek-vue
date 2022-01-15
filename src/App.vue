@@ -81,7 +81,6 @@ img {
 
 #main {
   flex: 1;
-  // margin-bottom: 75px;
 }
 
 label {

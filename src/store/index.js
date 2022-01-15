@@ -21,6 +21,7 @@ export default createStore({
   },
   mutations: {
     UPDATE_LOGIN(state, payload) {
+      console.log(payload)
       state.login = payload;
     },
     UPDATE_USUARIO(state, payload) {
@@ -43,6 +44,7 @@ export default createStore({
     },
     getUsuario(context, payload) {
       api.get(`/usuario/${payload}`).then(response => {
+        console.log(response.data)
         context.commit("UPDATE_USUARIO", response.data);
         context.commit("UPDATE_LOGIN", true);
       });

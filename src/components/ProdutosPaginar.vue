@@ -34,18 +34,15 @@ export default {
       };
     },
     ativarPaginacao() {
-      const $$item = this.$refs.paginacao.querySelectorAll("a");
-      const number = window.location.href
-        .split("")
-        .splice(-1)
-        .join("");
+      const $$item = this.$refs.paginacao?.querySelectorAll("a");
+      const number = window.location.href.split("").splice(-1).join("");
 
-      $$item.forEach(($item) => {
+      $$item?.forEach(($item) => {
         $item.classList.remove("router-link-exact-active");
         $$item[1].classList.add("router-link-exact-active");
       });
 
-      if ($$item[number]) {
+      if ($$item[number] || undefined) {
         $$item[1].classList.remove("router-link-exact-active");
         $$item[number].classList.add("router-link-exact-active");
       }
@@ -63,10 +60,8 @@ export default {
       for (let i = 1; i <= total; i++) {
         pagesArray.push(i);
       }
-
       pagesArray.splice(total, current - offSet);
       pagesArray.splice(range, total);
-
       // console.log(pagesArray);
       return pagesArray;
     },

@@ -35,17 +35,17 @@ const routes = [
         component: UsuarioProdutos,
       },
       {
-        path: "compras",
+        path: "",
         name: "compras",
         component: UsuarioCompras,
       },
       {
-        path: "vendas",
+        path: "",
         name: "vendas",
         component: UsuarioVendas,
       },
       {
-        path: "editar",
+        path: "",
         name: "usuario-editar",
         component: UsuarioEditar,
       }
