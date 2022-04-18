@@ -1,11 +1,9 @@
 <template>
   <section>
     <div v-if="produto" class="produto">
-      <ul class="fotos" v-if="produto.fotos">
-        <li v-for="(foto, index) in produto.fotos" :key="index">
-          <img :src="foto.src" :alt="foto.titulo" />
-        </li>
-      </ul>
+      <div class="fotos" v-if="produto.fotos">
+        <img :src="require(`@/assets/${produto.fotos}.jpg`)" :alt="produto.id" />
+      </div>
       <div class="info">
         <h1>{{ produto.nome }}</h1>
         <p class="preco">{{ $filters.currencyBR(produto.preco) }}</p>

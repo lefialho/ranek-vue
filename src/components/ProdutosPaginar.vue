@@ -37,6 +37,8 @@ export default {
       const $$item = this.$refs.paginacao?.querySelectorAll("a");
       const number = window.location.href.split("").splice(-1).join("");
 
+      if (!$$item) return;
+
       $$item?.forEach(($item) => {
         $item.classList.remove("router-link-exact-active");
         $$item[1].classList.add("router-link-exact-active");
@@ -62,7 +64,7 @@ export default {
       }
       pagesArray.splice(total, current - offSet);
       pagesArray.splice(range, total);
-      // console.log(pagesArray);
+
       return pagesArray;
     },
     paginasTotal() {

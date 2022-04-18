@@ -6,11 +6,7 @@
         <!-- key para animação -->
         <div class="produto" v-for="produto in produtos" :key="produto.id">
           <router-link :to="{ name: 'produto', params: { id: produto.id } }">
-            <img
-              v-if="produto.fotos"
-              :src="produto.fotos[0].src"
-              :alt="produto.fotos[0].titulo"
-            />
+            <img v-if="produto.fotos" :src="require(`@/assets/${produto.fotos}.jpg`)" :alt="produto.id" />
             <p class="preco">{{ $filters.currencyBR(produto.preco) }}</p>
             <h2 class="titulo">{{ produto.nome }}</h2>
             <p>{{ produto.descricao }}</p>
@@ -68,12 +64,12 @@ export default {
           this.produtosTotal = Number(response.headers["x-total-count"]);
           this.produtos = response.data;
         });
-        // console.log(response);
       }, 500);
-      // fetch("http://localhost:3000/produto")
-      //   .then((response) => response.json())
-      //   .then((response) => (this.produtos = response));
+      fetch("http://localhost:3000/produto")
+        .then((response) => response.json())
+        .then((response) => (this.produtos = response));
     },
+
   },
   watch: {
     // Sempre q a url modifica ele busca o produto com o watch
