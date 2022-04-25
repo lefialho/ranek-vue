@@ -1,4 +1,5 @@
-# app
+# app Ranek
+Criado no curso de **Vue** da Origamid, tem como propósito o estudo das principais ferramentas do framework.
 
 ## Project setup
 ```
