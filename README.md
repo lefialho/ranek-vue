@@ -2,7 +2,7 @@
 
 
 # app Ranek
-App criado no curso de **Vue** da Origamid, com o propósito de estudo das principais ferramentas do framework.
+App criado no curso de **Vue** da Origamid, com o propósito de estudo das principais ferramentas e tecnologias do framework.
 
 ## Project setup
 ```
