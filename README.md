@@ -1,5 +1,8 @@
+![image](https://user-images.githubusercontent.com/28053853/173392554-7d8511ea-bae3-4d5e-9ad5-d49037892beb.png)
+
+
 # app Ranek
-Criado no curso de **Vue** da Origamid, tem como propósito o estudo das principais ferramentas do framework.
+App criado no curso de **Vue** da Origamid, com o propósito de estudo das principais ferramentas do framework.
 
 ## Project setup
 ```
